@@ -1,9 +1,55 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="cVp0qxkYmyUmPzcjgbnp">
-    <mxGraphModel>
+    <mxGraphModel dx="1161" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nleft to right direction\nskinparam usecase {\n  BackgroundColor transparent\n}\n\nactor \&quot;Gestor de Armazém\&quot; as Gestor\nactor \&quot;Operador de Armazém\&quot; as Operador\n\npackage \&quot;Módulo 3: Distribuição e Expedição\&quot; {\n  \n  usecase \&quot;UC08 - Emitir Guia de Transporte: Gerar o documento legal e\\nobrigatório que acompanha a carga, associando de forma\\nclara o Cliente, a Transportadora e as Paletes criadas.\&quot; as UC08\n\n  usecase \&quot;UC09 - Alocar Carga a Veículo: Associar guias de transporte e\\nas respetivas paletes a um veículo específico da frota\\nou a uma rota de distribuição previamente definida.\&quot; as UC09\n\n  usecase \&quot;UC10 - Registar Saída de Armazém: Alterar o estado logístico da\\npalete e da guia para &#39;Expedido&#39;, confirmando e validando\\nque a carga saiu fisicamente das docas (cais) do armazém.\&quot; as UC10\n\n}\n\n&#39; Ligações Administrativas\nGestor --&gt; UC08\nGestor --&gt; UC09\n\n&#39; Ligações Operacionais\nOperador --&gt; UC10\n\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="tsopZBeetHv5B1DM4mAF-26">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_4" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;" plantUmlBaseValue="" id="tsopZBeetHv5B1DM4mAF-31">
+          <mxCell parent="tsopZBeetHv5B1DM4mAF-26" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;" vertex="1">
+            <mxGeometry height="60" width="40" x="70" y="255" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Gestor de Armazém" plantUmlId="actorlbl_5" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Gestor de Armazém" id="tsopZBeetHv5B1DM4mAF-32">
+          <mxCell parent="tsopZBeetHv5B1DM4mAF-26" style="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=14;" vertex="1">
+            <mxGeometry height="17" width="141" x="10" y="317" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_6" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;" plantUmlBaseValue="" id="tsopZBeetHv5B1DM4mAF-33">
+          <mxCell parent="tsopZBeetHv5B1DM4mAF-26" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;" vertex="1">
+            <mxGeometry height="60" width="40" x="900" y="240" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Operador de Armazém" plantUmlId="actorlbl_7" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Operador de Armazém" id="tsopZBeetHv5B1DM4mAF-34">
+          <mxCell parent="tsopZBeetHv5B1DM4mAF-26" style="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=14;" vertex="1">
+            <mxGeometry height="17" width="160" x="840" y="300" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="tsopZBeetHv5B1DM4mAF-41" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;Registar Saída de Armazém: Alterar o estado logístico da&lt;/span&gt;&lt;br style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;palete e da guia para &#39;Expedido&#39;, confirmando e validando&lt;/span&gt;&lt;br style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;que a carga saiu fisicamente do cais do armazém.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="109" width="520" x="200" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="tsopZBeetHv5B1DM4mAF-39" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;Alocar Carga a Veículo: Associar guias de transporte e&lt;/span&gt;&lt;br style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;as respetivas paletes a um veículo específico da frota&lt;/span&gt;&lt;br style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;ou a uma rota de distribuição previamente definida.&lt;/span&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="109" width="520" x="200" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tsopZBeetHv5B1DM4mAF-38" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;&amp;nbsp;Emitir Guia de Transporte: Gera o documento legal e&lt;/span&gt;&lt;br style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;obrigatório que acompanha a carga, associando de forma&lt;/span&gt;&lt;br style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;&lt;span style=&quot;caret-color: rgb(237, 237, 237); font-size: 14px;&quot;&gt;clara o Cliente, a Transportadora e as Paletes criadas.&lt;/span&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="109" width="520" x="200" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tsopZBeetHv5B1DM4mAF-42" edge="1" parent="1" source="tsopZBeetHv5B1DM4mAF-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="tsopZBeetHv5B1DM4mAF-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tsopZBeetHv5B1DM4mAF-43" edge="1" parent="1" source="tsopZBeetHv5B1DM4mAF-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tsopZBeetHv5B1DM4mAF-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tsopZBeetHv5B1DM4mAF-44" edge="1" parent="1" source="tsopZBeetHv5B1DM4mAF-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tsopZBeetHv5B1DM4mAF-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tsopZBeetHv5B1DM4mAF-46" edge="1" parent="1" source="tsopZBeetHv5B1DM4mAF-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tsopZBeetHv5B1DM4mAF-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
