@@ -1,0 +1,221 @@
+@startuml
+title Sistema de Logística e Expedição B2B
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam roundcorner 10
+skinparam linetype ortho
+
+' =========================
+' Classes principais
+' =========================
+
+class Produto {
+  - idProduto: int
+  - referencia: String
+  - descricao: String
+  - peso: decimal
+  - comprimento: decimal
+  - largura: decimal
+  - altura: decimal
+  - stock: int
+  - categoria: String
+
+  + atualizarStock(quantidade: int): void
+  + calcularVolume(): decimal
+}
+
+class Cliente {
+  - idCliente: int
+  - nome: String
+  - nif: String
+  - morada: String
+  - contacto: String
+
+  + atualizarDados(): void
+}
+
+class OrdemExpedicao {
+  - idOrdem: int
+  - dataCriacao: DateTime
+  - estado: EstadoOrdem
+
+  + adicionarProduto(produto: Produto, quantidade: int): void
+  + removerProduto(produto: Produto): void
+  + alterarEstado(estado: EstadoOrdem): void
+  + calcularPesoTotal(): decimal
+}
+
+class ItemExpedicao {
+  - idItem: int
+  - quantidade: int
+
+  + calcularPeso(): decimal
+}
+
+class Palete {
+  - idPalete: int
+  - pesoTotal: decimal
+  - volumeTotal: decimal
+  - codigoQR: String
+  - estado: EstadoPalete
+
+  + adicionarProduto(produto: Produto): void
+  + removerProduto(produto: Produto): void
+  + calcularPesoTotal(): decimal
+  + calcularVolumeTotal(): decimal
+}
+
+class ItemPalete {
+  - idItemPalete: int
+  - quantidade: int
+
+  + calcularPeso(): decimal
+  + calcularVolume(): decimal
+}
+
+class Etiqueta {
+  - idEtiqueta: int
+  - codigoBarras: String
+  - dataGeracao: DateTime
+
+  + gerarEtiqueta(): void
+  + imprimirEtiqueta(): void
+}
+
+class GuiaTransporte {
+  - idGuia: int
+  - dataEmissao: DateTime
+  - estado: EstadoGuia
+
+  + emitirGuia(): void
+  + alterarEstado(estado: EstadoGuia): void
+}
+
+class Transportadora {
+  - idTransportadora: int
+  - nome: String
+  - nif: String
+  - morada: String
+
+  + atualizarDados(): void
+}
+
+class Veiculo {
+  - matricula: String
+  - capacidadePeso: decimal
+  - capacidadeVolume: decimal
+  - estado: EstadoVeiculo
+
+  + verificarCapacidade(peso: decimal, volume: decimal): boolean
+  + alterarEstado(estado: EstadoVeiculo): void
+}
+
+class Tracking {
+  - idTracking: int
+  - dataHora: DateTime
+  - estado: EstadoTracking
+  - observacao: String
+
+  + registarEvento(): void
+}
+
+' =========================
+' Enumerações
+' =========================
+
+enum EstadoOrdem {
+  CRIADA
+  EM_PROCESSAMENTO
+  EMPALETADA
+  EXPEDIDA
+  CONCLUIDA
+  CANCELADA
+}
+
+enum EstadoPalete {
+  EM_PREPARACAO
+  FECHADA
+  CARREGADA
+  EM_TRANSITO
+  ENTREGUE
+}
+
+enum EstadoGuia {
+  EM_PREPARACAO
+  EMITIDA
+  EM_TRANSITO
+  CONCLUIDA
+  CANCELADA
+}
+
+enum EstadoVeiculo {
+  DISPONIVEL
+  EM_CARGA
+  EM_TRANSITO
+  INDISPONIVEL
+  MANUTENCAO
+}
+
+enum EstadoTracking {
+  EM_PROCESSAMENTO
+  EMPALETADO
+  CARREGADO
+  EM_TRANSITO
+  ENTREGUE
+  OCORRENCIA
+}
+
+' =========================
+' Relações
+' =========================
+
+Cliente "1" -- "0..*" OrdemExpedicao : realiza >
+
+OrdemExpedicao "1" *-- "1..*" ItemExpedicao : contém >
+Produto "1" -- "0..*" ItemExpedicao : corresponde a >
+
+OrdemExpedicao "1" *-- "0..*" Palete : origina >
+
+Palete "1" *-- "1..*" ItemPalete : contém >
+Produto "1" -- "0..*" ItemPalete : corresponde a >
+
+Palete "1" *-- "1" Etiqueta : possui >
+
+OrdemExpedicao "1" -- "0..1" GuiaTransporte : gera >
+
+Transportadora "1" -- "0..*" GuiaTransporte : responsável por >
+Transportadora "1" o-- "0..*" Veiculo : possui >
+
+Veiculo "1" -- "0..*" GuiaTransporte : utilizado em >
+
+GuiaTransporte "1" *-- "0..*" Tracking : possui >
+Palete "1" -- "0..*" Tracking : rastreada por >
+
+' =========================
+' Notas
+' =========================
+
+note right of ItemExpedicao
+  Classe associativa entre
+  OrdemExpedicao e Produto.
+
+  Permite indicar a quantidade
+  de cada produto na ordem.
+end note
+
+note right of ItemPalete
+  Classe associativa entre
+  Palete e Produto.
+
+  Permite indicar a quantidade
+  de cada produto colocado
+  numa palete.
+end note
+
+note bottom of Tracking
+  Regista o histórico dos estados
+  e das ocorrências da expedição.
+end note
+
+@enduml
