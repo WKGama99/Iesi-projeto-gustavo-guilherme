@@ -1,0 +1,83 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' --- ENTIDADES EXTERNAS / UTILIZADORES ---
+class Utilizador {
+  +ID: int
+  +Nome: String
+  +Password: String
+  +Tipo_Perfil: String
+  +login(): boolean
+}
+
+class ClienteB2B {
+  +NIF: String
+  +Nome_Empresa: String
+  +Morada_Faturacao: String
+  +Morada_Entrega: String
+  +consultarEstadoEnvio(): void
+  +confirmarRececao(): void
+}
+
+class Transportadora {
+  +ID_Transportadora: int
+  +Nome_Empresa: String
+  +Telefone: String
+}
+
+class Veiculo {
+  +Matricula: String
+  +Capacidade_Carga: float
+  +Tipo_Veiculo: String
+}
+
+' --- ENTIDADES CORE (PRODUTOS E ENCOMENDAS) ---
+class Produto {
+  +Referencia: String
+  +Descricao: String
+  +Categoria: String
+  +Peso_Unitario: float
+  +Volume_Unitario: float
+  +Qtd_Stock: int
+  +atualizarStock(): void
+}
+
+class OrdemExpedicao {
+  +ID_Ordem: int
+  +Data_Criacao: Date
+  +Estado_Ordem: String
+  +validarOrdem(): boolean
+}
+
+' --- ENTIDADES DE LOGÍSTICA (EMPALETAMENTO E EXPEDIÇÃO) ---
+class Palete {
+  +ID_Palete: int
+  +Codigo_Barras_QR: String
+  +Peso_Total: float
+  +Volume_Total: float
+  +Estado_Logistico: String
+  +adicionarProduto(): void
+  +removerProduto(): void
+  +gerarEtiqueta(): String
+}
+
+class GuiaTransporte {
+  +Numero_Guia: String
+  +Data_Emissao: Date
+  +Data_Prevista_Entrega: Date
+  +emitirGuia(): void
+  +registarSaidaCais(): void
+}
+
+' --- RELAÇÕES (ASSOCIAÇÕES E MULTIPLICIDADES) ---
+ClienteB2B "1" -- "*" OrdemExpedicao : "solicita >"
+OrdemExpedicao "1" -- "*" Produto : "contém lista de >"
+Produto "*" -- "1" Palete : "é agrupado em >"
+OrdemExpedicao "1" -- "*" Palete : "gera >"
+Palete "*" -- "1" GuiaTransporte : "é incluída na >"
+
+Transportadora "1" -- "*" Veiculo : "gere frota de >"
+Veiculo "1" -- "*" GuiaTransporte : "transporta >"
+GuiaTransporte "*" -- "1" ClienteB2B : "é entregue ao >"
+
+@enduml
