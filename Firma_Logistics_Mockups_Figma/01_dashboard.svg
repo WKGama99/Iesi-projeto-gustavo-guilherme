@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f7fb"/><stop offset="1" stop-color="#edf2f8"/></linearGradient>
+      <style>
+        text{font-family:Inter,Arial,sans-serif} .nav{font-size:14px;fill:#aebbd0} .nav.selected{fill:#fff;font-weight:600}
+        .navico{font-size:18px} .muted{fill:#718096;font-size:13px} .small{font-size:12px;fill:#718096}
+        .h1{font-size:27px;font-weight:700;fill:#17243a} .h2{font-size:17px;font-weight:700;fill:#17243a}
+        .label{font-size:12px;fill:#77859a;font-weight:600;letter-spacing:.4px}
+        .value{font-size:25px;font-weight:700;fill:#17243a} .body{font-size:14px;fill:#34445b}
+        .white{fill:#fff} .blue{fill:#2f6fed} .green{fill:#15966a} .orange{fill:#d88922}
+      </style>
+    </defs>
+    <rect width="1440" height="1000" fill="url(#bg)"/>
+    <rect x="0" y="0" width="280" height="1000" fill="#15243b"/>
+    <text x="28" y="58" font-size="22" font-weight="800" fill="#fff">FIRMA<tspan fill="#6ea2ff"> LOGISTICS</tspan></text>
+    <text x="28" y="82" font-size="10" fill="#91a2bb" letter-spacing="1.7">EXPEDIÇÃO INTELIGENTE</text>
+    <line x1="24" y1="112" x2="256" y2="112" stroke="#34445b"/>
+    <text x="30" y="158" font-size="10" fill="#72839d" font-weight="700" letter-spacing="1.4">MENU PRINCIPAL</text>
+    
+        <rect x="24" y="182" width="232" height="44" rx="9" fill="#243b63"/>
+        <text x="48" y="211" class="navico" fill="#ffffff">⌂</text>
+        <text x="78" y="211" class="nav selected">Visão geral</text>
+        <rect x="24" y="237" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="266" class="navico" fill="#9eacc2">▦</text>
+        <text x="78" y="266" class="nav ">Produtos</text>
+        <rect x="24" y="292" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="321" class="navico" fill="#9eacc2">▤</text>
+        <text x="78" y="321" class="nav ">Encomendas</text>
+        <rect x="24" y="347" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="376" class="navico" fill="#9eacc2">▣</text>
+        <text x="78" y="376" class="nav ">Empaletamento</text>
+        <rect x="24" y="402" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="431" class="navico" fill="#9eacc2">⇧</text>
+        <text x="78" y="431" class="nav ">Expedições</text>
+        <rect x="24" y="457" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="486" class="navico" fill="#9eacc2">◎</text>
+        <text x="78" y="486" class="nav ">Rastreabilidade</text>
+        <rect x="24" y="512" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="541" class="navico" fill="#9eacc2">♙</text>
+        <text x="78" y="541" class="nav ">Clientes</text>
+        <rect x="24" y="567" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="596" class="navico" fill="#9eacc2">▱</text>
+        <text x="78" y="596" class="nav ">Transportadoras</text>
+        <rect x="24" y="622" width="232" height="44" rx="9" fill="none"/>
+        <text x="48" y="651" class="navico" fill="#9eacc2">▰</text>
+        <text x="78" y="651" class="nav ">Veículos</text>
+    <rect x="20" y="900" width="240" height="70" rx="12" fill="#20334f"/>
+    <circle cx="52" cy="935" r="17" fill="#426da8"/><text x="52" y="940" font-size="13" fill="#fff" text-anchor="middle">GL</text>
+    <text x="80" y="931" font-size="13" font-weight="700" fill="#fff">Gestor Logístico</text>
+    <text x="80" y="950" font-size="11" fill="#aebbd0">Administrador</text>
+    <rect x="280" y="0" width="1160" height="78" fill="#fff"/>
+    <text x="316" y="32" class="muted">Operações / Visão geral</text>
+    <text x="316" y="56" font-size="13" font-weight="700" fill="#25344a">Painel de controlo</text>
+    <circle cx="1350" cy="39" r="17" fill="#edf3ff"/><text x="1350" y="44" font-size="15" fill="#2f6fed" text-anchor="middle">?</text>
+    <circle cx="1390" cy="39" r="17" fill="#edf3ff"/><text x="1390" y="44" font-size="15" fill="#2f6fed" text-anchor="middle">●</text>
+    <text x="316" y="130" class="h1">Painel de controlo</text>
+    <text x="316" y="157" class="muted">Acompanhe a operação logística num único espaço.</text>
+    <rect x="316" y="185" width="250" height="180" rx="13" fill="#ffffff" stroke="#e3eaf2"/><rect x="336" y="205" width="42" height="42" rx="10" fill="#2f6fed" opacity=".12"/><circle cx="357" cy="226" r="8" fill="#2f6fed"/><text x="336" y="278" class="label" text-anchor="start">ENCOMENDAS ATIVAS</text><text x="336" y="318" class="value" text-anchor="start">128</text><text x="336" y="345" class="small" text-anchor="start">+12,5% face à semana passada</text><rect x="586" y="185" width="250" height="180" rx="13" fill="#ffffff" stroke="#e3eaf2"/><rect x="606" y="205" width="42" height="42" rx="10" fill="#15966a" opacity=".12"/><circle cx="627" cy="226" r="8" fill="#15966a"/><text x="606" y="278" class="label" text-anchor="start">PALETES PREPARADAS</text><text x="606" y="318" class="value" text-anchor="start">346</text><text x="606" y="345" class="small" text-anchor="start">82% da capacidade diária</text><rect x="856" y="185" width="250" height="180" rx="13" fill="#ffffff" stroke="#e3eaf2"/><rect x="876" y="205" width="42" height="42" rx="10" fill="#d88922" opacity=".12"/><circle cx="897" cy="226" r="8" fill="#d88922"/><text x="876" y="278" class="label" text-anchor="start">EM TRÂNSITO</text><text x="876" y="318" class="value" text-anchor="start">74</text><text x="876" y="345" class="small" text-anchor="start">9 entregas previstas hoje</text><rect x="1126" y="185" width="250" height="180" rx="13" fill="#ffffff" stroke="#e3eaf2"/><rect x="1146" y="205" width="42" height="42" rx="10" fill="#15966a" opacity=".12"/><circle cx="1167" cy="226" r="8" fill="#15966a"/><text x="1146" y="278" class="label" text-anchor="start">ENTREGAS CONCLUÍDAS</text><text x="1146" y="318" class="value" text-anchor="start">1 284</text><text x="1146" y="345" class="small" text-anchor="start">96,8% dentro do prazo</text><rect x="316" y="385" width="540" height="360" rx="13" fill="#ffffff" stroke="#e3eaf2"/><text x="342" y="420" class="h2" text-anchor="start">Volume de expedições</text><text x="342" y="444" class="small" text-anchor="start">Últimos 7 dias · paletes expedidas</text><rect x="375" y="608" width="34" height="82" rx="5" fill="#77a5fa"/><text x="392" y="710" class="small" text-anchor="middle">Seg</text><rect x="441" y="575" width="34" height="115" rx="5" fill="#77a5fa"/><text x="458" y="710" class="small" text-anchor="middle">Ter</text><rect x="507" y="594" width="34" height="96" rx="5" fill="#77a5fa"/><text x="524" y="710" class="small" text-anchor="middle">Qua</text><rect x="573" y="548" width="34" height="142" rx="5" fill="#77a5fa"/><text x="590" y="710" class="small" text-anchor="middle">Qui</text><rect x="639" y="566" width="34" height="124" rx="5" fill="#77a5fa"/><text x="656" y="710" class="small" text-anchor="middle">Sex</text><rect x="705" y="620" width="34" height="70" rx="5" fill="#77a5fa"/><text x="722" y="710" class="small" text-anchor="middle">Sáb</text><rect x="771" y="642" width="34" height="48" rx="5" fill="#77a5fa"/><text x="788" y="710" class="small" text-anchor="middle">Dom</text><line x1="350" y1="690" x2="825" y2="690" stroke="#dce4ee"/><rect x="880" y="385" width="530" height="360" rx="13" fill="#ffffff" stroke="#e3eaf2"/><text x="888" y="420" class="h2" text-anchor="start">Atividade recente</text><circle cx="910" cy="471" r="5" fill="#15966a"/><text x="930" y="475" class="body" text-anchor="start">EXP-2026-0842</text><text x="930" y="495" class="small" text-anchor="start">Palete criada · Cliente Lusitano Foods</text><text x="1320" y="475" class="small" text-anchor="end">10:42</text><line x1="900" y1="510" x2="1340" y2="510" stroke="#edf1f6"/><circle cx="910" cy="533" r="5" fill="#2f6fed"/><text x="930" y="537" class="body" text-anchor="start">EXP-2026-0841</text><text x="930" y="557" class="small" text-anchor="start">Guia emitida · TransRápido</text><text x="1320" y="537" class="small" text-anchor="end">10:18</text><line x1="900" y1="572" x2="1340" y2="572" stroke="#edf1f6"/><circle cx="910" cy="595" r="5" fill="#d88922"/><text x="930" y="599" class="body" text-anchor="start">EXP-2026-0839</text><text x="930" y="619" class="small" text-anchor="start">Saída de armazém confirmada</text><text x="1320" y="599" class="small" text-anchor="end">09:56</text><line x1="900" y1="634" x2="1340" y2="634" stroke="#edf1f6"/><circle cx="910" cy="657" r="5" fill="#15966a"/><text x="930" y="661" class="body" text-anchor="start">EXP-2026-0838</text><text x="930" y="681" class="small" text-anchor="start">Entrega confirmada · Porto</text><text x="1320" y="661" class="small" text-anchor="end">09:20</text><rect x="316" y="765" width="1094" height="150" rx="13" fill="#ffffff" stroke="#e3eaf2"/><text x="342" y="802" class="h2" text-anchor="start">Alertas operacionais</text><text x="342" y="835" class="body" text-anchor="start">3 encomendas aguardam validação de stock</text><text x="342" y="865" class="body" text-anchor="start">2 veículos ainda sem rota atribuída</text><text x="1000" y="850" class="body" text-anchor="start">VER ALERTAS →</text>
+    </svg>

@@ -1,0 +1,19 @@
+FIRMA LOGISTICS — PROTÓTIPO DE MOCKUPS
+
+Conteúdo:
+01_dashboard.svg       Painel de controlo e indicadores
+02_produtos.svg        Catálogo e gestão de stock
+03_encomendas.svg      Ordens de expedição
+04_empaletamento.svg   Construção e validação de paletes
+05_expedicao.svg       Transportadora, veículo, rota e guia
+06_rastreabilidade.svg Tracking e prova de entrega (fluxo visual)
+
+Como importar no Figma:
+1. Descompacte o ZIP.
+2. Abra o Figma e crie um novo Design File.
+3. Arraste cada ficheiro SVG para a página do Figma ou use File > Place image.
+4. Cada ecrã é um SVG vetorial. Pode desagrupar os elementos no Figma para editar componentes e textos.
+5. Organize os seis ecrãs numa página chamada "Protótipo — Firma Logistics".
+
+Nota académica:
+Os ecrãs são uma proposta de interface baseada no relatório fornecido. Os dados apresentados são fictícios e servem apenas para demonstrar os fluxos. O relatório não especifica limites máximos de peso/volume, regras fiscais, integrações reais nem campos completos da base de dados; esses elementos devem ser validados pelo grupo.
